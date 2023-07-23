@@ -7,7 +7,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 
 public class Main {
@@ -22,16 +21,16 @@ public class Main {
         for (Corency corency: corencies
              ) {
             if(corency.getCc().equalsIgnoreCase("RUB")) {
-                System.out.println(corency.toString());
+                System.out.println(corency);
             }
             if(corency.getCc().equalsIgnoreCase("USD")) {
-                System.out.println(corency.toString());
+                System.out.println(corency);
             }
             if(corency.getCc().equalsIgnoreCase("EUR")) {
-                System.out.println(corency.toString());
+                System.out.println(corency);
             }
             if(corency.getCc().equalsIgnoreCase("DKK")) {
-                System.out.println(corency.toString());
+                System.out.println(corency);
             }
 
         }
@@ -45,7 +44,7 @@ public class Main {
         try{
             BufferedReader br = new BufferedReader(new InputStreamReader(http.getInputStream()));
             char[] buf = new char[1000000];
-            int i = 0;
+            int i ;
             do{
                 if ((i = br.read(buf)) > 0){
                     sb.append(new String(buf, 0, i));
