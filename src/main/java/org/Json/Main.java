@@ -21,7 +21,19 @@ public class Main {
 
         for (Corency corency: corencies
              ) {
-            System.out.println(corency.toString());
+            if(corency.getCc().equalsIgnoreCase("RUB")) {
+                System.out.println(corency.toString());
+            }
+            if(corency.getCc().equalsIgnoreCase("USD")) {
+                System.out.println(corency.toString());
+            }
+            if(corency.getCc().equalsIgnoreCase("EUR")) {
+                System.out.println(corency.toString());
+            }
+            if(corency.getCc().equalsIgnoreCase("DKK")) {
+                System.out.println(corency.toString());
+            }
+
         }
     }
 
